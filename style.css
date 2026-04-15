@@ -33,6 +33,11 @@ h5 {
     font-size: 16px;
     font-weight: 600;
 }
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 .btn-secondary {
     background-color: #ffffff;
     color: #1a1a1a;
@@ -57,6 +62,10 @@ h5 {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.btn-signup a {
+    color: #ffffff;
+    text-decoration: none;
 }
 .btn-signup:hover {
     background-color: #00a847;
@@ -279,5 +288,14 @@ h5 {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #1a1a1a;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
 }
 
