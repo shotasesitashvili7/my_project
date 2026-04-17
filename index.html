@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WishSchool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo"><img src="images/logo.png" alt="logo"></div>
-            <div class="burger" id="burger">
-                     ☰
-</div>
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="#">Courses</a>
-                <a href="#">Categories</a>
-                <a href="#">Instructors</a>
-                <a href="#">Contact Us</a>
-            </nav>
-             <button class="btn-signup"> <a href="login.html">Login</a></button>
-        </div>
+        <header class="header">
+  <div class="container header-inner">
+
+    <div class="logo">
+     <a href="index.html"><img src="images/logo.png" alt="logo"></a>    
+    </div>
+
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Categories</a>
+      <a href="#">Instructors</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <button class="btn-login">
+      <a href="login.html">Login</a>
+    </button>
+
+    <div class="burger" id="burger"><i class="fa-solid fa-bars"></i></div>
+
+  </div>
+          
     </header>
     <section class="hero">
         <div class="container">
@@ -111,23 +120,30 @@
             </div>
         </div>
     </section>
-   <div class="cookie-banner" id="cookieBanner">
-  <p>This site uses cookies</p>
-  <button id="acceptCookies">Accept</button>
-</div>
+  
     <footer class="footer">
+        
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    
                     <h5>WishSchool</h5>
-                    <p>Educating specialist in the field and the globe in a manner.</p>
+                    <p>We are not here to sell you products, we sell value through our expertise.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+   
+</div>
                 </div>
+                
                 <div class="footer-section">
                     <h5>Home</h5>
                     <ul>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#instructors">Instructors</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Instructors</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -138,6 +154,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h5>Legal</h5>
                     <ul>
@@ -159,6 +176,15 @@
             </div>
         </div>
     </footer>
+    <div id="cookieBanner" class="cookie-consent-banner" style="display: flex;">
+    <p>🍪 This website uses cookies to help you have a superior and more relevant browsing experience on the website. <a href="#" id="readMoreLink">Read more...</a></p>
+    <div class="cookie-buttons">
+        <button id="acceptCookiesBtn" class="btn-accept">Accept</button>
+        <button id="declineCookiesBtn" class="btn-decline">Decline</button>
+    </div>
+</div>
+    
+  <button id="scrollTopBtn"><i class="fa-solid fa-circle-arrow-up"></i></button>
     <script src="script.js"></script>
 </body>
 </html>
