@@ -3,6 +3,7 @@ body {
     color: #1a1a1a;
     line-height: 1.6;
     background-color: #ffffff;
+    text-decoration: none;
     
 }
 .container {
@@ -38,22 +39,7 @@ h5 {
   font-size: 28px;
   cursor: pointer;
 }
-.btn-secondary {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border: 2px solid #e0e0e0;
-    padding: 10px 28px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.btn-secondary:hover {
-    border-color: #00C853;
-    color: #00C853;
-}
-.btn-signup {
+.btn-login{
     background-color: #00C853;
     color: #ffffff;
     border: none;
@@ -63,13 +49,19 @@ h5 {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.btn-login a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn-login:hover {
+background-color: rgb(9, 248, 112);   
+}
 .btn-signup a {
     color: #ffffff;
     text-decoration: none;
 }
 .btn-signup:hover {
-    background-color: #00a847;
-}
+    background-color: #00a847;}
 .header {
     background-color: #ffffff;
     padding: 16px 0;
@@ -150,53 +142,76 @@ h5 {
 .popular-courses {
     padding: 60px 0;
     background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.section-header h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
 }
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
 }
 .course-card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
 }
 .course-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-.course-image {
+.course-image img {
     width: 100%;
-    height: 180px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.course-card img  {
-    width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
 }
 .course-card h4 {
-    padding-top: 24px;
-    padding-bottom: 8px;
-    font-size: 17px;
+    padding: 20px 20px 10px 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #222;
+    min-height: 60px;
 }
-.course-card .rating {
-    padding: 8px 24px;
-    color: #666666;
-    font-size: 14px;
-}
+.course-card .rating, 
 .course-card .students {
-    padding: 4px 24px;
-    color: #666666;
-    font-size: 13px;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+.course-card .rating::before {
+    color: #2ecc71;
 }
 .course-card .price {
-    padding: 16px 24px;
-    color: #00C853;
-    font-weight: 700;
-    font-size: 17px;
+    float: right;
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #2ecc71; 
+}
+.course-card::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .instructors {
     padding: 60px 0;
@@ -243,51 +258,10 @@ h5 {
     line-height: 1.6;
 }
 .footer {
-    background-color: #1a1a1a;
+    background-color: #000000; 
     color: #ffffff;
-    padding: 60px 0 20px;
-}
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 32px;
-    margin-bottom: 32px;
-    text-decoration: none;
-}
-.footer-content a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-.footer-section h5 {
-    color: #ffffff;
-    margin-bottom: 16px;
-}
-.footer-section p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 15px;
-    line-height: 1.6;
-}
-.newsletter button {
-    background-color: #00C853;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.newsletter button:hover {
-    background-color: #00a847;
-}
-.footer-bottom {
-    text-align: center;
-    padding-top: 32px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+    padding: 80px 0 50px 0;
+    font-family: 'Arial', sans-serif;
 }
 .cookie-banner {
   position: fixed;
@@ -298,4 +272,201 @@ h5 {
   padding: 15px;
   border-radius: 8px;
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 30px;
+}
+.footer-section:first-child {
+    flex: 2;
+}
+
+.footer-section h5 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 250px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+    color: #4ade80; 
+}
+.footer-section:last-child {
+    width: 100%;
+    flex: none;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer-section:last-child h5 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.newsletter {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.newsletter input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #4ade80;
+}
+.newsletter input::placeholder {
+    color: #4ade80;
+    opacity: 0.7;
+}
+.newsletter button {
+    background-color: #4ade80; /* ღია მწვანე ფერი */
+    color: #fff;
+    padding: 0 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.newsletter button:hover {
+    background-color: #38c172;
+}
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #888;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    color: #4ade80;
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.social-icons a:hover  {
+    color: white;
+}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #444;
+  transform: scale(1.1);
+}
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: 280px;
+    max-width: 420px;
+    background: #1f2a36;
+    backdrop-filter: blur(2px);
+    color: #f0f0f0;
+    padding: 18px 22px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.35);
+    z-index: 10000;
+    border: 1px solid rgba(0,200,83,0.3);
+    font-family: 'Segoe UI', system-ui;
+}
+.cookie-consent-banner p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #eef2f5;
+}
+.cookie-consent-banner a {
+    color: #00ff95;
+    text-decoration: none;
+    font-weight: 500;
+}
+.cookie-consent-banner a:hover {
+    text-decoration: underline;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+.cookie-buttons button {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-accept {
+    background-color: #00C853;
+    color: white;
+}
+.btn-accept:hover {
+    background-color: #00a847;
+    transform: scale(1.02);
+}
+.btn-decline {
+    background-color: #3a4a55;
+    color: #f0f0f0;
+}
+.btn-decline:hover {
+    background-color: #4f5f6b;
+}   
+
+
 
